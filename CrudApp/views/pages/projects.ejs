@@ -1,0 +1,27 @@
+<%- include('header') %>
+
+    <main class="page projects-page">
+        <section class="portfolio-block projects-cards">
+            <div class="container">
+                <div class="heading">
+                    <h2>Recent Work</h2>
+                </div>
+                <div class="row">
+                    <% var idDelay = 500; %>
+                    <% projects.forEach((project, index)=>{ %>
+                    <div class="col-md-6 col-lg-4 scale-on-hover" data-aos="zoom-in-left" data-aos-delay="<% idDelay+200 %>">
+                        <div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover" style="max-height: 200px;"
+                                    src="<%= project.image %>" alt="Card Image"></a>
+                            <div class="card-body" style="box-shadow: 0px 0px 0.2px 0.2px">
+                                <h6><a href="#"><%= project.title %></a></h6>
+                                <p class="text-muted card-text"><%= project.description %>.</p>
+                                <a  class=" btn btn-primary" href="preview/<%= project._id %>">Live Preview</a>
+                            </div>
+                        </div>
+                    </div>
+                    <% }) %>
+                </div>
+            </div>
+        </section>
+    </main>
+    <%- include('footer') %>

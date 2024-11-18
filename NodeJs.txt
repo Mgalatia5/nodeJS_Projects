@@ -1,0 +1,19 @@
+mkdir node-crud-app
+cd node-crud-app
+npm init -y
+
+
+npm install express mysql mongoose body-parser dotenv nodemon ejs
+
+node app.js  //run the application
+
+
+for reload eidit package.json
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+
+TO
+  "scripts": {
+    "start": "nodemon index.js"
+  },
